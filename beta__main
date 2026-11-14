@@ -1,0 +1,22 @@
+
+package checker;
+
+
+public class main {
+    public static void main(String[] args) {
+
+        Checker obj = new Checker();
+
+        char[] a = {'h', 'a', 'i'};
+        char[] b = {'h', 'a', 'i'};
+
+        boolean result = obj.checker(a, b);
+         {
+            System.out.println("Same");
+            
+        } {
+            System.out.println("Not same");
+        }
+    }
+}
+
