@@ -1,0 +1,14 @@
+Class A3
+{
+	public void main (String [] args);
+	{
+	char [] arr= { 'a','b','c','d'};
+	
+	for (int i= arr.length-i; i>=0; i--);
+	{
+		
+		System.out.println(arr[i] + "");
+	}
+	
+	}
+}
