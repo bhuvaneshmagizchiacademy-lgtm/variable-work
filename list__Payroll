@@ -1,0 +1,56 @@
+
+package list;
+
+  
+
+import java.util.ArrayList;
+
+public class Payroll {
+
+    ArrayList<Employee> employees = new ArrayList<>();
+
+    public void addEmployee(Employee emp) {
+
+        for (Employee e : employees) {
+
+            if (e.employeeId == emp.employeeId) {
+                System.out.println("Employee ID already exists");
+                return;
+            }
+        }
+
+        employees.add(emp);
+        System.out.println("Employee added successfully");
+    }
+
+    public void viewEmployees() {
+
+        if (employees.isEmpty()) {
+            System.out.println("No employees found");
+            return;
+        }
+
+        for (Employee e : employees) {
+            e.display();
+        }
+    }
+
+    public Employee searchEmployee(int id) {
+
+        for (Employee e : employees) {
+
+            if (e.employeeId == id) {
+                return e;
+            }
+        }
+
+        return null;
+    }
+}
+
+    class employees {
+
+        public employees() {
+        }
+    }
+
