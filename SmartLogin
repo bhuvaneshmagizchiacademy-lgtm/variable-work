@@ -1,0 +1,42 @@
+
+package handling;
+
+
+public class SmartLogin {
+    
+    public static void main(String[] args) {
+
+        String correctUsername = "admin";
+        String correctPassword = "1234";
+
+        String username = "abc";
+        String password = "1111";
+
+        int attempts = 0;
+
+        while (attempts < 3) {
+
+            if (username.equals(correctUsername)
+                    && password.equals(correctPassword)) {
+
+                System.out.println("Login Successful");
+                break;
+
+            } else {
+
+                attempts++;
+                System.out.println("Invalid Credentials");
+                System.out.println("Remaining Attempts: " + (3 - attempts));
+            }
+        }
+
+        try {
+            if (attempts == 3) {
+                throw new Exception("Account Locked");
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
