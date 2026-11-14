@@ -1,0 +1,31 @@
+
+package first;
+
+
+public class Main {
+ 
+
+public static void main(String[] args) {
+
+    Main obj = new Main();
+
+    int[] arr = {1, 2, 3, 4, 5};
+
+    System.out.println(obj.sumFirstHalf(arr));
+}
+
+public int sumFirstHalf(int[] arr) {
+
+    int sum = 0;
+
+    int half = (arr.length + 1) / 2;
+
+    for (int i = 0; i < half; i++) {
+        sum = sum + arr[i];
+    }
+
+    return sum;
+}
+
+}  
+
