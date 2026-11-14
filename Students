@@ -1,0 +1,96 @@
+
+package file;
+
+
+
+    import java.util.Set;
+import java.util.HashSet;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Students {
+
+    public static void main(String[] args) throws Exception {
+
+        BufferedReader br =
+            new BufferedReader(new InputStreamReader(System.in));
+
+        Set<String> members = new HashSet<>();
+
+        while (true) {
+
+            System.out.println("\n===== STUDENT CLUB MANAGEMENT =====");
+            System.out.println("1. Add Member");
+            System.out.println("2. Remove Member");
+            System.out.println("3. Search Member");
+            System.out.println("4. Display All Members");
+            System.out.println("5. Count Members");
+            System.out.println("6. Exit");
+            System.out.print("Enter choice: ");
+
+            int choice = Integer.parseInt(br.readLine());
+
+            switch (choice) {
+
+                case 1:
+                    System.out.print("Enter Member Name: ");
+                    String name = br.readLine();
+
+                    if (members.add(name)) {
+                        System.out.println("Member Added Successfully!");
+                    } else {
+                        System.out.println("Member Already Exists!");
+                    }
+                    break;
+
+                case 2:
+                    System.out.print("Enter Member Name: ");
+                    name = br.readLine();
+
+                    if (members.remove(name)) {
+                        System.out.println("Member Removed Successfully!");
+                    } else {
+                        System.out.println("Member Not Found!");
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter Member Name: ");
+                    name = br.readLine();
+
+                    if (members.contains(name)) {
+                        System.out.println("Member is Present in the Club.");
+                    } else {
+                        System.out.println("Member is Not Present.");
+                    }
+                    break;
+
+                case 4:
+                    if (members.isEmpty()) {
+                        System.out.println("No Members Available.");
+                    } else {
+                        System.out.println("Club Members:");
+
+                        for (String member : members) {
+                            System.out.println(member);
+                        }
+                    }
+                    break;
+
+                case 5:
+                    System.out.println(
+                        "Total Members: " + members.size()
+                    );
+                    break;
+
+                case 6:
+                    System.out.println("Application Closed.");
+                    return;
+
+                default:
+                    System.out.println("Invalid Choice!");
+            }
+        }
+    }
+}
+
