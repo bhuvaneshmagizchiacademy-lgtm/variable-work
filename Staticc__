@@ -1,0 +1,57 @@
+
+package Staticc;
+
+
+public class College {
+
+    static final String collegeName = "coussanal arts  College";
+
+    final int registrationFee;
+
+    static int totalStudents = 0;
+
+    College(int registrationFee) {
+        this.registrationFee = registrationFee;
+        totalStudents++;
+    }
+
+    static void displayCollegeDetails() {
+        System.out.println("College Name: " + collegeName);
+        System.out.println("Total Students: " + totalStudents);
+    }
+
+    void displayStudentFee() {
+        System.out.println("Student Registration Fee: " + registrationFee);
+    }
+
+    public static void main(String[] args) {
+
+        College student1 = new College(25000);
+        College student2 = new College(30000);
+
+        displayCollegeDetails();
+
+        student1.displayStudentFee();
+        student2.displayStudentFee();
+    }
+}    
+{
+my number is blocked in the youe phome 
+i res[ect you may not want to talk to me 
+i just want to contavt you once
+if you are cimfirtabke pkease ynblock my 
+numberr wee can talk
+calmly i don>t
+we can talk calmy i don>t
+i on;y wQNT T LEAR TO TALLK I WILL RESPORT
+
+T PEWARR take care
+
+
+
+i know you have bocked my number i m herra to say someeyhing 
+importantt eanted to say sojething and ypur desdion i dont
+after that i wull respect i eull respret misunderstant my intention
+tak care and stay hapy
+
+}
