@@ -1,0 +1,28 @@
+
+package ffff;
+
+  import java.io.File;
+
+import java.io.IOException;
+
+public class FileHandle {
+
+    public static void main(String[] args) throws IOException {
+
+        
+        File f1 = new File("C:\\J59 File");
+        folder.mkdir();
+
+       File f2 = new File ("C:\\j59 File\\bhuvanesh\\bhuvan");
+       folder.mkdirs();
+       
+        
+   
+       
+      
+      
+      
+    }
+}
+
+    
