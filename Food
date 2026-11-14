@@ -1,0 +1,12 @@
+class Food
+{
+public static void main (String[]args)
+{
+System.out.println("Welcome To Java Programming");
+System.out.println("I love Biriyani");
+System.out.println("Java Sundaresan");
+System.out.println("Life is better With Music");
+System.out.println("Samosa And Chai Ready");
+System.out.println("No talking, Only Writing");
+}
+}
