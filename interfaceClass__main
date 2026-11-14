@@ -1,0 +1,21 @@
+
+package interfaceClass;
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter payment amount: ");
+        double amount = sc.nextDouble();
+
+        Payment creditCard = new CreditCardPayment();
+        Payment upi = new UPIPayment();
+
+        creditCard.pay(amount);
+        upi.pay(amount);
+
+        sc.close();
+    }
+}
