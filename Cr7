@@ -1,0 +1,21 @@
+class Cr7{
+	
+	
+	public ststic void main(String[] args){
+		
+		string name = "Hari";
+		int age = 17;
+		char grade = 'B';
+		boolean passed = True;
+		
+		System.out.println("-----------------------------");
+		
+		system.out.println("Name : " + name);
+		system.out.println("Age : " +age);
+		system.out.println("Grade : "+grade);
+		system.out.println("Passed : "+passed);
+		system.out.println("-------------------------------");
+		
+		}
+}
+	
