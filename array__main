@@ -1,0 +1,25 @@
+
+package arr;
+
+import arr.ShoopingCart.Item;
+
+public class main {
+   
+   
+
+    public static void main(String[] args) {
+
+        ShoopingCart cart = new ShoopingCart();
+
+        cart.cartOwnerName = "Arun";
+
+        double[] prices = {1500, 1400, 1300};
+
+        ShoopingCart.Item item =  cart.new Item("Headphones", 2, prices);
+
+        item.displayDetails();
+    }
+}
+
+
+
