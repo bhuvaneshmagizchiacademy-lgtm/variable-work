@@ -1,0 +1,33 @@
+
+package Gen;
+
+public class Main {
+    
+  
+    public static void main(String[] args) {
+
+        // Generic Box
+        Box<Integer> intBox = new Box<>();
+        intBox.store(100);
+        intBox.display();
+   
+        Box<String> stringBox = new Box<>();
+        stringBox.store("Java");
+        stringBox.display();
+
+
+        // Generic Calculator
+        Calculator<Integer> intCal = new Calculator<>();
+
+        System.out.println("Integer Add : " + intCal.add(10, 20));
+        System.out.println("Integer Subtract : " + intCal.subtract(20, 10));
+
+
+        Calculator<Double> doubleCal = new Calculator<>();
+
+        System.out.println("Double Add : " + doubleCal.add(10.5, 20.5));
+        System.out.println("Double Subtract : " + doubleCal.subtract(20.5, 10.5));
+    }
+}
+    
+
