@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+class BankLoan{
+	
+	
+    public static void main(String[] args) {
+		
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Bank Loan Eligibility System ");
+
+        System.out.print("Enter Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter Age: ");
+        int age = Integer.parseInt(sc.nextLine());
+
+        System.out.print("Enter Monthly Salary: ");
+        double salary = Double.parseDouble(sc.nextLine());
+
+        System.out.print("Enter CIBIL Score: ");
+        int cibil = Integer.parseInt(sc.nextLine());
+
+        System.out.print("Are you an Existing Customer? (true/false): ");
+        boolean existingCustomer = Boolean.parseBoolean(sc.nextLine());
+
+        System.out.println();
+        System.out.println("Checking Loan Eligibility...");
+        System.out.println();
+
+        if (age >= 21) {
+            if (salary >= 20000) {
+                if (cibil >= 750) {
+                    if (existingCustomer) {
+                        System.out.println(name + " Eligible for Premium Loan \uD83D\uDCB0");
+                    } else {
+                        System.out.println(name + " Eligible for Standard Loan");
+                    }
+                } else if (cibil >= 650) {
+                    System.out.println(name + " Eligible for Low Amount Loan");
+                } else {
+                    System.out.println(name + " Not Eligible (Low CIBIL Score)");
+                }
+            } else {
+                System.out.println(name + " Not Eligible (Low Salary)");
+            }
+        } else {
+            System.out.println(name + " Not Eligible (Age criteria not satisfied)");
+        }
+
+        sc.close();
+    }
+}
