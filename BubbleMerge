@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+class BubbleMerge
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        //BUBBLE SORT
+        int n1 = sc.nextInt();
+        int[] arr1 = new int[n1];
+        for (int i = 0; i < n1; i++) arr1[i] = sc.nextInt();
+        
+        int passes = 0;
+        for (int i = 0; i < n1 - 1; i++) {
+            passes++;
+            for (int j = 0; j < n1 - i - 1; j++) {
+                if (arr1[j] > arr1[j + 1]) {
+                    int temp = arr1[j];
+                    arr1[j] = arr1[j + 1];
+                    arr1[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("Sorted Array:");
+        for (int i = 0; i < n1; i++) System.out.print(arr1[i] + (i == n1 - 1 ? "" : " "));
+        System.out.println("\nNumber of Passes: " + passes);
+        
+        // SORT
+        int n2 = sc.nextInt();
+        int[] arr2 = new int[n2];
+        for (int i = 0; i < n2; i++) arr2[i] = sc.nextInt();
+        
+        mergeSort(arr2, 0, n2 - 1);
+        
+        System.out.println("Sorted Array:");
+        for (int i = 0; i < n2; i++) System.out.print(arr2[i] + (i == n2 - 1 ? "" : " "));
+        System.out.println("\nMiddle Element: " + arr2[n2 / 2]);
+        
+        sc.close();
+    }
+
+    public static void mergeSort(int[] arr, int left, int right) {
+        if (left < right) {
+            int mid = left + (right - left) / 2;
+            mergeSort(arr, left, mid);
+            mergeSort(arr, mid + 1, right);
+            merge(arr, left, mid, right);
+        }
+    }
+
+    public static void merge(int[] arr, int left, int mid, int right) {
+        int n1 = mid - left + 1, n2 = right - mid;
+        int[] L = new int[n1], R = new int[n2];
+        for (int i = 0; i < n1; ++i) L[i] = arr[left + i];
+        for (int j = 0; j < n2; ++j) R[j] = arr[mid + 1 + j];
+
+        int i = 0, j = 0, k = left;
+        while (i < n1 && j < n2) arr[k++] = (L[i] <= R[j]) ? L[i++] : R[j++];
+        while (i < n1) arr[k++] = L[i++];
+        while (j < n2) arr[k++] = R[j++];
+    }
+}
