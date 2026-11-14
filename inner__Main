@@ -1,0 +1,29 @@
+
+package inner;
+
+
+public class Main {
+    
+    public static void main(String[] args) {
+
+        Institution ins = new Institution();
+        Institution.Student s = ins.new Student();
+        
+        
+        s.setStudent("Arun", 101, 3);
+
+        s.marks[0] = 78;
+        s.marks[1] = 85;
+        s.marks[2] = 90;
+
+        s.calculate();
+        s.display();
+    }
+
+    private static class Student {
+
+        public Student() {
+        }
+    }
+}
+
