@@ -1,0 +1,127 @@
+import java.util.Scanner;
+
+class Details{
+	
+	public static void main(String [] args)
+	{
+		
+		Scanner player = new Scanner(System.in);
+		
+		
+		
+		System.out.println("``````````````````````enna player name venum``````````````````````");
+		
+		char playername = player.next().charAt(0);
+		
+		switch(playername){
+			
+			case 'A':{
+				System.out.println("*****Alisson Becker*****");
+				break;
+			}
+		    case 'B':{
+			    System.out.println("*****Bellingham*****");
+			    break;
+			}
+			case 'C':{
+			    System.out.println("*****Cristiano Ronaldo");
+				break;
+			}
+			case 'D':{
+			    System.out.println("*****De Haland******");
+				break;
+			}
+			case 'E':{
+			    System.out.println("*****Eden Hazard*****");
+				break;
+			}
+			case 'F':{
+			    System.out.println("*****Foden*****");
+				break;
+			}
+			case 'G':{
+			    System.out.println("*****Griezman*****");
+				break;
+			}
+		    case 'H':{
+			    System.out.println("*****Halland*****");
+				break;
+			}
+			case 'I':{
+			    System.out.println("*****Iniesta*****");
+				break;
+			}
+			case 'J':{
+			    System.out.println("*****Jamal Musials*****");
+				break;
+			}
+			case 'K':{
+			    System.out.println("*****Kane*****");
+				break;
+			}
+		    case 'L':{
+			    System.out.println("******Lionel Messi*****");
+				break;
+			}
+			case 'M':{
+			    System.out.println("*****Mbappe*****");
+				break;
+			}
+			case 'N':{
+			    System.out.println("*****Neymar*****");
+				break;
+			}
+			case 'O':{
+			    System.out.println("*****Ozil*****");
+				break;
+			}
+			case 'P':{
+			    System.out.println("*****Pedri*****");
+				break;
+			}
+			case 'Q':{
+			    System.out.println("*****Quaresma*****");
+				break;
+			}
+			case 'R':{
+			    System.out.println("*****Roanldinho*****");
+				break;
+			}
+			case 'S':{
+			    System.out.println("*****Salah*****");
+				break;
+			}
+			case 'T':{
+			    System.out.println("*****Thierry Henry*****");
+				break;
+			}
+			case 'U':{
+			    System.out.println("*****umtiti*****");
+				break;
+			}
+			case 'V':{
+			    System.out.println("*****Virgil Van Dijk*****");
+				break;
+			}
+			case 'W':{
+			    System.out.println("*****Wayne Rooney*****");
+				break;
+			}
+			case 'X':{
+			    System.out.println("*****Xavi*****");
+				break;
+			}
+			case 'Y':{
+			    System.out.println("*****Yaya Toure*****");
+				break;
+			}
+			case 'Z':{
+			    System.out.println("*****Zinedine Zidane*****");
+				break;
+			}
+			default:{
+				System.out.println("!__________Other Player Not Available___________!");
+			}	
+		}
+	}
+}
