@@ -1,0 +1,18 @@
+
+package Gen;
+
+
+public class Box<T> {
+
+    T value;
+
+    void store(T value) {
+        this.value = value;
+    }
+
+    void display() {
+        System.out.println("Value : " + value);
+    }
+}
+
+
