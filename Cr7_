@@ -1,0 +1,16 @@
+class Cr7{
+	
+	
+	public ststic void main (String[] args){
+		
+		String name = "Hari";
+		Byte age = 17;
+		Char grade = 'B';
+		Boolean passed = True;
+		
+		System.out.println("-----------------------------");
+		
+		system.out.println();
+		}
+}
+	
