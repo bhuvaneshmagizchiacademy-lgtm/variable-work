@@ -1,0 +1,117 @@
+import java.util.Scanner;
+
+class ConstructorHw
+ {
+
+    public static void main(String[] args) 
+	
+	{
+
+        Scanner sc = new Scanner(System.in);
+
+ 
+        ConstructorHw[] books = new ConstructorHw[100];
+
+        int count = 0;
+        int choice;
+
+        do 
+		{
+            System.out.println("\n--- LIBRARY MANAGEMENT ---");
+            System.out.println("1. Add New Book");
+            System.out.println("2. Display All Books");
+            System.out.println("3. Borrow a Book");
+            System.out.println("4. Return a Book");
+            System.out.println("5. Exit");
+
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+            sc.nextLine();
+
+            switch (choice)
+			{
+
+                case 1:
+                    System.out.print("Enter Book ID: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.print("Enter Book Title: ");
+                    String title = sc.nextLine();
+
+                    System.out.print("Enter Author Name: ");
+                    String author = sc.nextLine();
+
+                    books[count] = new ConstructorHw(id, title, author);
+                    count++;
+
+                    System.out.println("Book added successfully.");
+                    break;
+
+                case 2:
+                    if (count == 0) {
+                        System.out.println("No books available.");
+                    } else {
+                        for (int i = 0; i < count; i++) {
+                            books[i].display();
+                            System.out.println("-------------------");
+                        }
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter Book ID to borrow: ");
+                    int borrowId = sc.nextInt();
+
+                    boolean borrowFound = false;
+
+                    for (int i = 0; i < count; i++)
+						{
+                        if (books[i].bookId == borrowId)
+							{
+                            books[i].borrowBook();
+                            borrowFound = true;
+                            break;
+                        }
+                    }
+
+                    if (!borrowFound)
+						{
+                        System.out.println("Book not found.");
+                    }
+                    break;
+
+                case 4:
+                    System.out.print("Enter Book ID to return: ");
+                    int returnId = sc.nextInt();
+
+                    boolean returnFound = false;
+
+                    for (int i = 0; i < count; i++) 
+					{
+                        if (books[i].bookId == returnId) 
+						{
+                            books[i].returnBook();
+                            returnFound = true;
+                            break;
+                        }
+                    }
+
+                    if (!returnFound) {
+                        System.out.println("Book not found.");
+                    }
+                    break;
+
+                case 5:
+                    System.out.println("Library system closed.");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice.");
+            }
+
+        } while (choice != 5);
+
+        sc.close();
+    }
+}
