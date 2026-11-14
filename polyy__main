@@ -1,0 +1,262 @@
+package polyy;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        Transport transport = null;
+
+        int choice;
+
+        do {
+
+            System.out.println(
+                    "\n---- TRANSPORT MANAGEMENT SYSTEM ----");
+
+            System.out.println(
+                    "1. City Bus Booking");
+
+            System.out.println(
+                    "2. Luxury Bus Booking");
+
+            System.out.println(
+                    "3. Calculate Fare");
+
+            System.out.println(
+                    "4. Display Ticket");
+
+            System.out.println(
+                    "5. Exit");
+
+            System.out.print(
+                    "Enter your choice: ");
+
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+
+                    System.out.print(
+                            "Enter Passenger ID: ");
+
+                    int cityId = sc.nextInt();
+
+                    sc.nextLine();
+
+                    System.out.print(
+                            "Enter Passenger Name: ");
+
+                    String cityName = sc.nextLine();
+
+                    System.out.println(
+                            "\n1. Chennai -> Bangalore");
+
+                    System.out.println(
+                            "2. Chennai -> Coimbatore");
+
+                    System.out.println(
+                            "3. Chennai -> Madurai");
+
+                    System.out.println(
+                            "4. Chennai -> Trichy");
+
+                    System.out.println(
+                            "5. Chennai -> Salem");
+
+                    System.out.print(
+                            "Enter Route Choice: ");
+
+                    int cityRoute = sc.nextInt();
+
+                    String cityTo = "";
+                    double cityDistance = 0;
+
+                    if (cityRoute == 1) {
+
+                        cityTo = "Bangalore";
+                        cityDistance = 350;
+
+                    } else if (cityRoute == 2) {
+
+                        cityTo = "Coimbatore";
+                        cityDistance = 500;
+
+                    } else if (cityRoute == 3) {
+
+                        cityTo = "Madurai";
+                        cityDistance = 460;
+
+                    } else if (cityRoute == 4) {
+
+                        cityTo = "Trichy";
+                        cityDistance = 330;
+
+                    } else if (cityRoute == 5) {
+
+                        cityTo = "Salem";
+                        cityDistance = 340;
+
+                    } else {
+
+                        System.out.println(
+                                "Invalid Route!");
+
+                        break;
+                    }
+
+                    transport = new CityBus(
+                            cityId,
+                            cityName,
+                            "Chennai",
+                            cityTo,
+                            cityDistance
+                    );
+
+                    System.out.println(
+                            "City Bus Ticket Booked Successfully");
+
+                    break;
+
+
+                case 2:
+
+                    System.out.print(
+                            "Enter Passenger ID: ");
+
+                    int luxuryId = sc.nextInt();
+
+                    sc.nextLine();
+
+                    System.out.print(
+                            "Enter Passenger Name: ");
+
+                    String luxuryName = sc.nextLine();
+
+                    System.out.println(
+                            "\n1. Chennai -> Bangalore");
+
+                    System.out.println(
+                            "2. Chennai -> Coimbatore");
+
+                    System.out.println(
+                            "3. Chennai -> Madurai");
+
+                    System.out.println(
+                            "4. Chennai -> Trichy");
+
+                    System.out.println(
+                            "5. Chennai -> Salem");
+
+                    System.out.print(
+                            "Enter Route Choice: ");
+
+                    int luxuryRoute = sc.nextInt();
+
+                    String luxuryTo = "";
+                    double luxuryDistance = 0;
+
+                    if (luxuryRoute == 1) {
+
+                        luxuryTo = "Bangalore";
+                        luxuryDistance = 350;
+
+                    } else if (luxuryRoute == 2) {
+
+                        luxuryTo = "Coimbatore";
+                        luxuryDistance = 500;
+
+                    } else if (luxuryRoute == 3) {
+
+                        luxuryTo = "Madurai";
+                        luxuryDistance = 460;
+
+                    } else if (luxuryRoute == 4) {
+
+                        luxuryTo = "Trichy";
+                        luxuryDistance = 330;
+
+                    } else if (luxuryRoute == 5) {
+
+                        luxuryTo = "Salem";
+                        luxuryDistance = 340;
+
+                    } else {
+
+                        System.out.println(
+                                "Invalid Route!");
+
+                        break;
+                    }
+
+                    transport = new LuxuryBus(
+                            luxuryId,
+                            luxuryName,
+                            "Chennai",
+                            luxuryTo,
+                            luxuryDistance
+                    );
+
+                    System.out.println(
+                            "Luxury Bus Ticket Booked Successfully");
+
+                    break;
+
+
+                case 3:
+
+                    if (transport != null) {
+
+                        transport.calculateFare();
+
+                        System.out.println(
+                                "Fare Calculated Successfully");
+
+                    } else {
+
+                        System.out.println(
+                                "Please Book Ticket First!");
+                    }
+
+                    break;
+
+
+                case 4:
+
+                    if (transport != null) {
+
+                        transport.displayTicket();
+
+                    } else {
+
+                        System.out.println(
+                                "Please Book Ticket First!");
+                    }
+
+                    break;
+
+
+                case 5:
+
+                    System.out.println(
+                            "Thank You!");
+
+                    break;
+
+
+                default:
+
+                    System.out.println(
+                            "Invalid Choice!");
+            }
+
+        } while (choice != 5);
+
+        sc.close();
+    }
+}
+
