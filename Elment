@@ -1,0 +1,19 @@
+
+package first;
+
+
+public class Elment {
+    public int sumFirstHalf(int[] arr) {
+
+int sum = 0;
+
+int half = (arr.length + 1) / 2;
+
+for (int i = 0; i < half; i++) {
+    sum = sum + arr[i];
+}
+
+return sum;
+
+}
+}
