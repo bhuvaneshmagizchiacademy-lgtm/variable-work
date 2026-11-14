@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+class BhuvanFamily {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Family Count : ");
+        int size = sc.nextInt();
+
+        int dressAmount[] = new int[size];
+        int totalAmount = 0;
+
+        for (int i = 0; i < size; i++) {
+            System.out.print("Dress Amount  " + (i + 1) + " : ");
+            dressAmount[i] = sc.nextInt();
+            totalAmount += dressAmount[i];
+        }
+
+        int max = dressAmount[0];
+
+        for (int i = 1; i < size; i++) {
+            if (dressAmount[i] > max) {
+                max = dressAmount[i];
+            }
+        }
+
+        
+        System.out.println("Maximum Amount Spent : " + max);
+
+        sc.close();
+    }
+}
