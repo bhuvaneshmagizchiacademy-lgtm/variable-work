@@ -1,0 +1,24 @@
+
+package summa;
+
+
+public class NewClass {
+    
+    public String name = "bhuvanesh";
+
+   private String password = "12345678";
+   
+   public void viewname(){
+   
+       System.out.println("bhuvanesh");
+   }
+    private void viewpassword(){
+        System.out.println("12345678");
+    }
+    
+    public static void main(String [] args){
+    Newclass nnnn = new Newclass();     
+        System.out.println("nnn.name");
+        System.out.println("nnn.password");
+    }
+}
