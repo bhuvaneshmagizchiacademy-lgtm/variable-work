@@ -1,0 +1,25 @@
+
+package handling;
+
+public class Atm {
+    
+    public static void main(String[] args) {
+
+        double balance = 10000;
+        double withdrawAmount = 12000;
+
+        try {
+            if (withdrawAmount > balance) {
+                throw new ArithmeticException("Insufficient Balance");
+            }
+
+            balance = balance - withdrawAmount;
+            System.out.println("Withdrawal Successful");
+            System.out.println("Balance: " + balance);
+
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
