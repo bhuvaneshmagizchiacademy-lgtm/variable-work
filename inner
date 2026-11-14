@@ -1,0 +1,54 @@
+
+package inner;
+
+public class Institution {
+    
+    String institutionName = "ABC Institution";
+
+    class Student {
+        String studentName;
+        int rollNo;
+        int[] marks;
+        double average;
+        char grade;
+
+        void setStudent(String name, int roll, int n) {
+            studentName = name;
+            rollNo = roll;
+            marks = new int[n];
+        }
+
+        void calculate() {
+            int sum = 0;
+
+            for (int i = 0; i < marks.length; i++)
+                sum = sum + marks[i];
+
+            average = (double) sum / marks.length;
+
+            if (average >= 90)
+                grade = 'A';
+            else if (average >= 75)
+                grade = 'B';
+            else if (average >= 50)
+                grade = 'C';
+            else
+                grade = 'F';
+        }
+
+        void display() {
+            System.out.println("Institution Name: " + institutionName);
+            System.out.println("Student Name: " + studentName);
+            System.out.println("Roll No: " + rollNo);
+
+            System.out.print("Marks: ");
+            for (int i = 0; i < marks.length; i++)
+                System.out.print(marks[i] + " ");
+
+            System.out.println();
+            System.out.println("Average: " + average);
+            System.out.println("Grade: " + grade);
+        }
+    }
+}
+
