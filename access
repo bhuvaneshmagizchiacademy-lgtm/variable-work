@@ -1,0 +1,33 @@
+
+package modifiers;
+
+
+public class Student {
+    
+
+    // Private variables
+    private int id;
+    private String name;
+    private int age;
+
+    // Add student details
+    public void setStudentDetails(int id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    // Display student details
+    public void displayStudentDetails() {
+        System.out.println("\n--- Student Details ---");
+        System.out.println("Student ID: " + id);
+        System.out.println("Student Name: " + name);
+        System.out.println("Student Age: " + age);
+    }
+
+    // Update student age
+    public void updateAge(int age) {
+        this.age = age;
+        System.out.println("Student age updated successfully.");
+    }
+}
