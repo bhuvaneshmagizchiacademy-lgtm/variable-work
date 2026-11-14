@@ -1,0 +1,11 @@
+package summa;
+
+
+class Newclass {
+    public static void main(String[] args) {
+        
+        newclass nnn = new newclass();
+        nnn.viewname();
+        nnn.viewpassword();
+    }
+}
