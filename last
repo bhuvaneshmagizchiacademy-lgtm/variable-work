@@ -1,0 +1,17 @@
+
+package last;
+
+
+public class add {
+
+ 
+
+            public static int findLastOdd(int[] arr) {
+                for (int i = arr.length - 1; i >= 0; i--) {
+                    if (arr[i] % 2 != 0) {
+                        return arr[i];
+                    }
+                }
+                   return -1; 
+            }
+        }
