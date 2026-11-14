@@ -1,0 +1,132 @@
+
+package insert;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Controller {
+
+    public static void start()
+            throws SQLException, ClassNotFoundException {
+
+        Scanner sc = new Scanner(System.in);
+        Scanner sc1 = new Scanner(System.in);
+
+        Service ser = new Service();
+
+        while (true) {
+
+            System.out.println("==============================================");
+            System.out.println("             WELCOME TO MR CAKES");
+            System.out.println("==============================================");
+
+            System.out.println("1. INSERT CAKE");
+            System.out.println("2. VIEW CAKES");
+            System.out.println("3. UPDATE CAKE");
+            System.out.println("4. DELETE CAKE");
+            System.out.println("5. EXIT");
+
+            System.out.print("Enter your choice : ");
+            int choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1: {
+
+                    Model mo = new Model();
+
+                    System.out.print("Enter Cake ID : ");
+                    mo.setid_no(sc.nextInt());
+
+                    System.out.print("Enter Cake Name : ");
+                    mo.setcake_name(sc1.nextLine());
+
+                    System.out.print("Enter Category : ");
+                    mo.setcategory(sc1.nextLine());
+
+                    System.out.print("Enter Flavour : ");
+                    mo.setflavour(sc1.nextLine());
+
+                    System.out.print("Enter Price : ");
+                    mo.setprice(sc.nextInt());
+
+                    ser.insertCake(mo);
+
+                    System.out.println("Cake inserted successfully");
+
+                    break;
+                }
+
+                case 2: {
+
+                    ArrayList<Model> list = ser.viewCake();
+
+                    for (Model l : list) {
+
+                        System.out.println("--------------------------------");
+                        System.out.println("CAKE ID   : " + l.getid_no());
+                        System.out.println("CAKE NAME : " + l.getcake_name());
+                        System.out.println("CATEGORY  : " + l.getcategory());
+                        System.out.println("FLAVOUR   : " + l.getflavour());
+                        System.out.println("PRICE     : " + l.getprice());
+                        System.out.println("--------------------------------");
+                    }
+
+                    break;
+                }
+
+                case 3: {
+
+                    Model mo = new Model();
+
+                    System.out.print("Enter Cake ID to Update : ");
+                    mo.setid_no(sc.nextInt());
+
+                    System.out.print("Enter New Cake Name : ");
+                    mo.setcake_name(sc1.nextLine());
+
+                    System.out.print("Enter New Category : ");
+                    mo.setcategory(sc1.nextLine());
+
+                    System.out.print("Enter New Flavour : ");
+                    mo.setflavour(sc1.nextLine());
+
+                    System.out.print("Enter New Price : ");
+                    mo.setprice(sc.nextInt());
+
+                    ser.updateCake(mo);
+
+                    System.out.println("Cake updated successfully");
+
+                    break;
+                }
+
+                case 4: {
+
+                    System.out.print("Enter Cake ID to Delete : ");
+                    int id = sc.nextInt();
+
+                    ser.deleteCake(id);
+
+                    break;
+                }
+
+                case 5: {
+
+                    System.out.println("Thank You!");
+                    System.exit(0);
+
+                    break;
+                }
+
+                default: {
+
+                    System.out.println("Invalid choice");
+
+                    break;
+                }
+            }
+        }
+    }
+}
