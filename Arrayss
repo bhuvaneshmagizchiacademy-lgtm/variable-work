@@ -1,0 +1,81 @@
+import java.util.Scanner;
+
+class Arrayss {
+
+    public static void displayArray(int[] arr) {
+        System.out.print("Array elements: ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static int findSum(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    public static int findLargest(int[] arr) {
+        int largest = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > largest) {
+                largest = arr[i];
+            }
+        }
+        return largest;
+    }
+
+    public static int findSmallest(int[] arr) {
+        int smallest = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < smallest) {
+                smallest = arr[i];
+            }
+        }
+        return smallest;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of elements in the array: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int choice;
+        do {
+            System.out.println("\n----- MENU -----");
+            System.out.println("1. Display Array");
+            System.out.println("2. Find Sum");
+            System.out.println("3. Find Largest Element");
+            System.out.println("4. Find Smallest Element");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+
+            if (choice == 1) {
+                displayArray(arr);
+            } else if (choice == 2) {
+                System.out.println("Sum of array elements: " + findSum(arr));
+            } else if (choice == 3) {
+                System.out.println("Largest element: " + findLargest(arr));
+            } else if (choice == 4) {
+                System.out.println("Smallest element: " + findSmallest(arr));
+            } else if (choice == 5) {
+                System.out.println("Goodbye!");
+            } else {
+                System.out.println("Invalid choice! Please enter a number between 1 and 5.");
+            }
+        } while (choice != 5);
+
+        sc.close();
+    }
+}
