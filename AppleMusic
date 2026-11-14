@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+class AppleMusic
+{
+	
+	public static void main(String args [])
+	{
+	
+		Scanner Bhuvan = new Scanner(System.in);
+		
+		System.out.println("WELCOME TO ");
+		
+		System.out.println("SIR SELECT THA MUSIC DIRECTOR");
+		
+		System.out.println("1. HipHop Tamizha Adhi");
+		System.out.println("2. Gv Prakash");
+		System.out.println("3. Deva");
+		System.out.println("4. Gana Vinoth");
+		System.out.println("5. Vijay Antony");
+		
+		
+		System.out.println("Sir entha music director venum ? ");
+		     int choice=Bhuvan.nextInt();
+		
+		       if (Song == 1){
+			
+		System.out.println("HipHop Tamizha Adhi Play list");
+		
+		      System.out.println("1. Rap Song");
+		      System.out.println("2. Romantic");
+		      System.out.println("3. Karala Song");
+		      System.out.println("4. Nostalgic");	
+		      System.out.println("5. Energetic");
+			  
+		      System.out.println("ithula entha song venum");
+			  int choice = Bhuvan.nextInt();
+				 
+		       if (Song==1){
+				   
+				  System.out.println("song 1. Naan rise aaguren, never gonna fall,dream-ah chase pannu, break every well") ;
+				  System.out.println("song 2. Un kannu paatha, heart-u freeze aachu, un  sirippu vandha,time-e bright aachu"); 
+				  System.out.println("song 3. Street-u la beat-u namma vibe-u vera level, namban kooda serndha life-u full-u festival");
+				  System.out.println("song 4. Ninaivugal ellam varudhe, pazhaya naatkal kanavula varudhe,  ") ;
+				  System.out.println("song 5. Wake upp da, idhu namma time-u dream-ah chase pannu, never hit rewind-u") ;
+				  
+				  
+				   System.out.println("sir unga song ready");
+			   }
+			   
+		}
+	}
+}
