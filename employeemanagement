@@ -1,0 +1,74 @@
+
+package console;
+    
+import java.util.Scanner;
+
+public class EmployeeManagement {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        Employee[] emp = new Employee[100];
+        int count = 0;
+        int choice;
+
+        do {
+            System.out.println("\n1. Add Employee");
+            System.out.println("2. View Employees");
+            System.out.println("3. Search Employee");
+            System.out.println("4. Exit");
+            System.out.print("Enter choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    System.out.print("Enter ID: ");
+                    int id = sc.nextInt();
+
+                    System.out.print("Enter Name: ");
+                    String name = sc.next();
+
+                    System.out.print("Enter Department: ");
+                    String dept = sc.next();
+
+                    emp[count] = new Employee(id, name, dept);
+                    count++;
+
+                    System.out.println("Employee Added!");
+                    break;
+
+                case 2:
+                    for (int i = 0; i < count; i++) {
+                        System.out.println("ID: " + emp[i].id);
+                        System.out.println("Name: " + emp[i].name);
+                        System.out.println("Department: " + emp[i].department);
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter ID: ");
+                    int searchId = sc.nextInt();
+
+                    for (int i = 0; i < count; i++) {
+                        if (emp[i].id == searchId) {
+                            System.out.println("ID: " + emp[i].id);
+                            System.out.println("Name: " + emp[i].name);
+                            System.out.println("Department: " + emp[i].department);
+                        }
+                    }
+                    break;
+
+                case 4:
+                    System.out.println("Thank You!");
+                    break;
+
+                default:
+                    System.out.println("Invalid Choice!");
+            }
+
+        } while (choice != 4);
+
+        sc.close();
+    }
+}
