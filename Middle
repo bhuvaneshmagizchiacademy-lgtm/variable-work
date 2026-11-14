@@ -1,0 +1,11 @@
+
+package Middle;
+
+
+public class mid {
+ public static int middle midment(int[] arr)
+ {
+     return arr(arr.length/2);
+ }
+}
+   
