@@ -1,0 +1,111 @@
+
+package insert;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+public class Dao {
+
+    Connection con;
+
+    public Dao() throws SQLException, ClassNotFoundException {
+
+        Class.forName("org.postgresql.Driver");
+
+        con = java.sql.DriverManager.getConnection(
+                "jdbc:postgresql://localhost:5432/mr_cakes",
+                "postgres",
+                "3010"
+        );
+    }
+
+    // INSERT
+    public void insert(Model mo) throws SQLException {
+
+        String query = "INSERT INTO cakelisttt "
+                + "(id_no, cake_name, category, flavour, price) "
+                + "VALUES (?, ?, ?, ?, ?)";
+
+        PreparedStatement ps = con.prepareStatement(query);
+
+        ps.setInt(1, mo.getid_no());
+        ps.setString(2, mo.getcake_name());
+        ps.setString(3, mo.getcategory());
+        ps.setString(4, mo.getflavour());
+        ps.setInt(5, mo.getprice());
+
+        ps.executeUpdate();
+    }
+
+    // VIEW
+    public ArrayList<Model> view() throws SQLException {
+
+        ArrayList<Model> list = new ArrayList<>();
+
+        String query = "SELECT * FROM cakelisttt";
+
+        PreparedStatement ps = con.prepareStatement(query);
+
+        ResultSet rs = ps.executeQuery();
+
+        while (rs.next()) {
+
+            Model mo = new Model();
+
+            mo.setid_no(rs.getInt("id_no"));
+            mo.setcake_name(rs.getString("cake_name"));
+            mo.setcategory(rs.getString("category"));
+            mo.setflavour(rs.getString("flavour"));
+            mo.setprice(rs.getInt("price"));
+
+            list.add(mo);
+        }
+
+        return list;
+    }
+
+    // UPDATE
+    public void update(Model mo) throws SQLException {
+
+        String query = "UPDATE cakelisttt "
+                + "SET cake_name = ?, category = ?, flavour = ?, price = ? "
+                + "WHERE id_no = ?";
+
+        PreparedStatement ps = con.prepareStatement(query);
+
+        ps.setString(1, mo.getcake_name());
+        ps.setString(2, mo.getcategory());
+        ps.setString(3, mo.getflavour());
+        ps.setInt(4, mo.getprice());
+        ps.setInt(5, mo.getid_no());
+
+        int result = ps.executeUpdate();
+
+        if (result > 0) {
+            System.out.println("Cake updated successfully");
+        } else {
+            System.out.println("Cake ID not found");
+        }
+    }
+
+    // DELETE
+    public void delete(int id) throws SQLException {
+
+        String query = "DELETE FROM cakelisttt WHERE id_no = ?";
+
+        PreparedStatement ps = con.prepareStatement(query);
+
+        ps.setInt(1, id);
+
+        int result = ps.executeUpdate();
+
+        if (result > 0) {
+            System.out.println("Cake deleted successfully");
+        } else {
+            System.out.println("Cake ID not found");
+        }
+    }
+}
