@@ -1,0 +1,55 @@
+
+package system;
+     
+class OTPSystem {
+    private String originalOTP;   
+    private String enteredOTP;
+
+   
+    public OTPSystem(String originalOTP) {
+        this.originalOTP = originalOTP;
+    }
+
+    
+    public void setEnteredOTP(String enteredOTP) {
+        this.enteredOTP = enteredOTP;
+    }
+
+    
+    public void verifyOTP() {
+        if (originalOTP.equals(enteredOTP)) {
+            System.out.println("OTP Verified Successfully");
+        } else {
+            System.out.println("Invalid OTP");
+        }
+    }
+
+    
+    public void modifyOTP() {
+        String temp = originalOTP;   
+        temp.concat("00");           
+       
+        System.out.println("After concat: " + originalOTP);
+    }
+}
+
+public class OTPVerification {
+    public static void main(String[] args) {
+
+        
+        OTPSystem otpSystem = new OTPSystem("4589");
+
+     
+        String userEnteredOTP = "4589";
+        System.out.println("Enter OTP: " + userEnteredOTP);
+
+        otpSystem.setEnteredOTP(userEnteredOTP);
+        otpSystem.verifyOTP();
+        otpSystem.modifyOTP();
+    }
+}
+
+  
+    
+
+
