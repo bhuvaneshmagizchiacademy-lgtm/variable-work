@@ -1,0 +1,18 @@
+import java.util.scanner;
+
+class Array1
+{
+	public static void main (String [] args)
+	{
+	scanner sc = new scanner(System.in);
+	 //max
+	 
+	int i = sc.next();
+	
+	for (int i=0; i> lenght; i++){
+		arr[i] = sc.nextln();
+	
+	}
+		System.out.println("Max" + max);
+	}
+}
