@@ -1,0 +1,62 @@
+
+package operation;
+
+import java.io.*;
+
+
+public class Bank {
+    
+
+    public static void main(String[] args) throws Exception {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int balance = 0, count = 0, choice, amount;
+
+        do {
+            System.out.println("\n1. Deposit");
+            System.out.println("2. Withdraw");
+            System.out.println("3. Balance");
+            System.out.println("4. Transaction Count");
+            System.out.println("5. Exit");
+
+            System.out.print("Enter choice: ");
+            choice = Integer.parseInt(br.readLine());
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter amount: ");
+                    amount = Integer.parseInt(br.readLine());
+                    balance = balance + amount;
+                    count++;
+                    break;
+
+                case 2:
+                    System.out.print("Enter amount: ");
+                    amount = Integer.parseInt(br.readLine());
+
+                    if (amount <= balance) {
+                        balance = balance - amount;
+                        count++;
+                    } else {
+                        System.out.println("Insufficient Balance");
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("Balance = " + balance);
+                    break;
+
+                case 4:
+                    System.out.println("Transaction Count = " + count);
+                    break;
+
+                case 5:
+                    System.out.println("Exit");
+                    break;
+            }
+
+        } while (choice != 5);
+    }
+}
+
