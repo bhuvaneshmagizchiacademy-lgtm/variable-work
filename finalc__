@@ -1,0 +1,25 @@
+
+package finalc;
+
+
+public final  class Student {
+ 
+    public static void main(String[] args) {
+        
+        student st = new student ();
+        int id = 10;                                        
+        id =20;
+        
+        final string name="BHUVAN";
+        string date ="30,10,2005";
+        
+        st.display();
+        st.dob(data);
+    }
+    public final void display(){
+        System.out.println("welcome to bhuvanesh home");
+    }
+    public stayic void dob(final string date){
+            System.out.println("date of birth :"+data);
+    }
+}
