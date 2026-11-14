@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+class Home14{
+	
+    // Recursive Fibonacci 
+	
+    static void fibonacci(int a, int b, int count, int n) {
+        if (count < n) {
+            System.out.print(a + " ");
+            fibonacci(b, a + b, count + 1, n);
+        }
+    }
+    // Recursive divisor
+	
+    static int checkDivisor(int n, int i) {
+        return i * i > n ? 1 : (n % i == 0 ? 0 : checkDivisor(n, i + 1));
+    }
+    static int isPrime(int n) {
+        return n < 2 ? 0 : checkDivisor(n, 2);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of terms: ");
+        int n1 = sc.nextInt();
+        System.out.print("Fibonacci series: ");
+        fibonacci(0, 1, 0, n1);
+        System.out.println();
+        System.out.print("Enter number: ");
+        int n2 = sc.nextInt();
+        int result = isPrime(n2);
+        System.out.println(n2 + (result == 1 ? " is a Prime number" : " is not a Prime number"));
+        sc.close();
+    }
+}
