@@ -1,0 +1,40 @@
+
+package array;
+
+
+import java.util.ArrayList;
+
+public class ArrayListProject{
+
+    public static void main(String[] args) {
+
+        ArrayList<String> list = new ArrayList<>();
+        // list.add("________________________________________");
+        list.add("BHUVANESH");
+        list.add("J59");
+        list.add("O +VE");
+        list.add("30/10/2005");
+        list.add("RAMANATHAPURAM");
+        // list.add("_____________________________________________");
+
+        for (String bhuvan :list){
+            System.out.println(bhuvan);
+            
+        }
+
+        list.set(1, "J59");
+
+        list.remove(4);
+
+        System.out.println(list.contains("O +VE"));
+
+        System.out.println(list.indexOf("30/10/2005"));
+
+        System.out.println(list.size());
+
+        list.clear();
+
+        System.out.println(list);
+    }
+}
+
