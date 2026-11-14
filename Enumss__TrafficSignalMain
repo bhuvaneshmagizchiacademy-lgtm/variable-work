@@ -1,0 +1,61 @@
+
+package Enumss;
+
+
+import java.util.Scanner;
+
+public class TrafficSignalMain {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+
+            System.out.println("\n1. Show Signal Meaning");
+            System.out.println("2. Check Stop or Go");
+            System.out.println("3. Exit");
+
+            System.out.print("Enter choice: ");
+            int choice = sc.nextInt();
+
+            switch (choice) {
+
+            case 1 -> {
+                System.out.println("RED - Stop");
+                System.out.println("YELLOW - Wait");
+                System.out.println("GREEN - Go");
+                }
+
+            case 2 -> {
+                System.out.print("Enter Signal: ");
+                TrafficSignal signal =
+                        TrafficSignal.valueOf(sc.next().toUpperCase());
+
+                if (null == signal)
+                    System.out.println("WAIT");
+                else switch (signal) {
+                    case RED:
+                        System.out.println("STOP");
+                        break;
+                    case GREEN:
+                        System.out.println("GO");
+                        break;
+                    default:
+                        System.out.println("WAIT");
+                        break;
+                }
+                }
+
+
+            case 3 -> {
+                System.out.println("Exit");
+                return;
+                }
+
+            default -> System.out.println("Invalid Choice");
+            }
+        }
+    }
+} 
+
