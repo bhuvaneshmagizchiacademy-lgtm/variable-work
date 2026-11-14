@@ -1,0 +1,25 @@
+package Staticc;
+
+public class Bank {
+    
+    static final String BANK_NAME = "BHUVAN BANK";
+    static final double INTEREST_RATE = 7.5;
+
+    static double calculateInterest(double principal, int years) {
+        return (principal * INTEREST_RATE * years) / 100;
+    }
+
+    public static void main(String[] args) {
+
+        double principal = 10000;
+        int years = 2;
+
+        double interest = calculateInterest(principal, years);
+
+        System.out.println("Bank Name: " + BANK_NAME);
+        System.out.println("Principal Amount: " + principal);
+        System.out.println("Years: " + years);
+        System.out.println("Interest Amount: " + interest);
+    }
+}
+
