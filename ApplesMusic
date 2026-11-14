@@ -1,0 +1,246 @@
+import java.util.Scanner;
+
+class ApplesMusic {
+
+    static Scanner Bhuvan = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        char repeat;
+
+        do {
+
+            System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+            System.out.println("      WELCOME TO BHUVAN MUSIC LIST ");
+            System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+            System.out.println("--------------------------------------------------------------------------------------------------------");
+            System.out.println("SIR SELECT THA MUSIC DIRECTOR");
+            System.out.println("---------------------------------------------------------------------------------------------------------");
+
+            System.out.println("1. HipHop Tamizha Adhi");
+            System.out.println("2. Gv Prakash");
+            System.out.println("3. STR");
+            System.out.println("4. Gana Vinoth");
+            System.out.println("5. Vijay Antony");
+
+            System.out.println("------------------------------------------- ");
+            System.out.println("Sir entha music director venum ? ");
+            System.out.println("--------------------------------------------");
+
+            int choice = Bhuvan.nextInt();
+
+            if (choice == 1) {
+                hipHopTamizhaAdhi();
+            } else if (choice == 2) {
+                gvPrakash();
+            } else if (choice == 3) {
+                str();
+            } else if (choice == 4) {
+                ganaVinoth();
+            } else if (choice == 5) {
+                vijayAntony();
+            } else {
+                System.out.println("Sir sariyana music director select pannunga (1-5)");
+            }
+            System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  c ");
+            System.out.println("Sir vera mass song venuma  ? (Y/N)");
+            System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+			
+            repeat = Bhuvan.next().charAt(0);
+
+        } while (repeat == 'Y' || repeat == 'y');
+
+    }
+
+    static void printReadyBanner() {
+        System.out.println("////////////////////////////////////////////");
+        System.out.println("sir unga song ready");
+        System.out.println("////////////////////////////////////////////");
+    }
+
+    static void hipHopTamizhaAdhi() {
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("WELCOME TO HipHop Tamizha Adhi MUSIC LIST ");
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+
+        System.out.println("------------------------------------------------------");
+        System.out.println("HipHop Tamizha Adhi Play list");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        System.out.println("1. Rap Song");
+        System.out.println("2. Romantic");
+        System.out.println("3. Karala Song");
+        System.out.println("4. Nostalgic");
+        System.out.println("5. Energetic");
+
+        System.out.println("````````````````````````````````````````````````````");
+        System.out.println("ithula entha playlist venum sir ?");
+        System.out.println("`````````````````````````````````````````````````````");
+
+        int songChoice = Bhuvan.nextInt();
+        printReadyBanner();
+
+        if (songChoice == 1) {
+            System.out.println("song 1. Naan rise aaguren, never gonna fall, dream-ah chase pannu, break every wall");
+        } else if (songChoice == 2) {
+            System.out.println("song 2. Un kannu paatha, heart-u freeze aachu, un sirippu vandha, time-e bright aachu");
+        } else if (songChoice == 3) {
+            System.out.println("song 3. Street-u la beat-u namma vibe-u vera level, namban kooda serndha life-u full-u festival");
+        } else if (songChoice == 4) {
+            System.out.println("song 4. Ninaivugal ellam varudhe, pazhaya naatkal kanavula varudhe");
+        } else if (songChoice == 5) {
+            System.out.println("song 5. Wake upp da, idhu namma time-u dream-ah chase pannu, never hit rewind-u");
+        } else {
+            System.out.println("Sir sariyana option select pannunga (1-5)");
+        }
+    }
+
+    static void gvPrakash() {
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("WELCOME TO Gv Prakash MUSIC LIST ");
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+        System.out.println("````````````````````````````````````````````````````");
+        System.out.println("Gv Prakash Play list");
+        System.out.println("``````````````````````````````````````````````````");
+
+        System.out.println("1. Feel Song");
+        System.out.println("2. Romantic");
+        System.out.println("3. love Song");
+        System.out.println("4. Vibe song");
+        System.out.println("5. melody");
+
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("ithula entha playlist venum sir ?");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        int songChoice = Bhuvan.nextInt();
+        printReadyBanner();
+
+        if (songChoice == 1) {
+            System.out.println("song 1. bhattam puchia jetsah matitane patta bottu enna ketta wangitane ");
+        } else if (songChoice == 2) {
+            System.out.println("song 2. yennachu eduachu aedhedho aayachu kanath kannukkulla kaadhai ippo ponnachu ");
+        } else if (songChoice == 3) {
+            System.out.println("song 3. mancellam manaiye nanaagiteen uire en nenjil vandhu tangi charal adithai yennakum uire uire ");
+        } else if (songChoice == 4) {
+            System.out.println("song 4. appappa kaaichal vittu pocha achacho kaathal novu aachu ");
+        } else if (songChoice == 5) {
+            System.out.println("song 5. viziyil un vizhiyil vandhu vilunden antha nodiyil");
+        } else {
+            System.out.println("Sir sariyana option select pannunga (1-5)");
+        }
+    }
+
+    static void str() {
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("WELCOME TO STR MUSIC LIST ");
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+
+        System.out.println("````````````````````````````````````````");
+        System.out.println("STR PLAY LIST");
+        System.out.println("`````````````````````````````````````````");
+
+        System.out.println("1. fell Song");
+        System.out.println("2. Romantic");
+        System.out.println("3. Goosebumps Song");
+        System.out.println("4. Vibe song");
+        System.out.println("5. Energetic");
+
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("ithula entha playlist venum sir ?");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        int songChoice = Bhuvan.nextInt();
+        printReadyBanner();
+
+        if (songChoice == 1) {
+            System.out.println("song 1. Loosu pennae, lossu panae, lossu pannae lossu paiyan unmela dhaan loosaa suthuraan ");
+        } else if (songChoice == 2) {
+            System.out.println("song 2. othaiyadi pathyila thaavi oduren aththai peththa poonguyila thedi vaaduren ");
+        } else if (songChoice == 3) {
+            System.out.println("song 3. manmadane nee kalaian thaan manmadane nee kavision thaan");
+        } else if (songChoice == 4) {
+            System.out.println("song 4. tamilendal nan oru tamilnta enakku balam en rasicenta getavannu feradutt nallavanta ");
+        } else if (songChoice == 5) {
+            System.out.println("song 5. unna parthu siricha adha ullukkulla nerupaakku avamanam kedacha unna kuthi ");
+        } else {
+            System.out.println("Sir sariyana option select pannunga (1-5)");
+        }
+    }
+
+    static void ganaVinoth() {
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("WELCOME TO GANA VINOTH MUSIC LIST ");
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+        System.out.println("````````````````````````````````````````````");
+        System.out.println("GANA VINOTH PLAY LIST ");
+        System.out.println("``````````````````````````````````````````````");
+
+        System.out.println("1. Fell Song");
+        System.out.println("2. Romantic");
+        System.out.println("3. Local Song");
+        System.out.println("4. Nostalgic");
+        System.out.println("5. Energetic");
+
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("ithula entha playlist venum sir ?");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        int songChoice = Bhuvan.nextInt();
+        printReadyBanner();
+
+        if (songChoice == 1) {
+            System.out.println("song 1. oru kuchi oru kuifi vanthu ninnu edu selfie ");
+        } else if (songChoice == 2) {
+            System.out.println("song 2. kashtati sricha vell level u ishtapattu ushichcha vell level u");
+        } else if (songChoice == 3) {
+            System.out.println("song 3. en love-u kilinch share augo en heart-u bone beer ahttam beer ahttam ");
+        } else if (songChoice == 4) {
+            System.out.println("song 4. ae manch balloonu nee supper saloonu ae vaadi cooling watermelonu");
+        } else if (songChoice == 5) {
+            System.out.println("song 5. mittai song rowdy mitti song tranding thaiyur gana vinoth ");
+        } else {
+            System.out.println("Sir sariyana option select pannunga (1-5)");
+        }
+    }
+
+    static void vijayAntony() {
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("WELCOME TO Vijay Antony MUSIC LIST ");
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+
+        System.out.println("``````````````````````````````````````````");
+        System.out.println("VIJAY ANTONY PLAY LIST ");
+        System.out.println("```````````````````````````````````````````");
+
+        System.out.println("1. feel Song");
+        System.out.println("2. Romantic");
+        System.out.println("3. chennai mix Song");
+        System.out.println("4. Nostalgic");
+        System.out.println("5. Energetic");
+
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+        System.out.println("ithula entha playlist venum sir ?");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        int songChoice = Bhuvan.nextInt();
+        printReadyBanner();
+
+        if (songChoice == 1) {
+            System.out.println("song 1. muskara boattu mayakuriya masta nee pachi gaoukkurie");
+        } else if (songChoice == 2) {
+            System.out.println("song 2. idchu-itchu-itchu-itchu kodu vechu-vechu-vechu kodu");
+        } else if (songChoice == 3) {
+            System.out.println("song 3. aa machakhanni ottukitchu bacht thanni pattikitchu dillele bote dillele ");
+        } else if (songChoice == 4) {
+            System.out.println("song 4. azumbe azumbe enna katti po karumba alumbe tazumbe ulla ketatti po gurumbe ");
+        } else if (songChoice == 5) {
+            System.out.println("song 5. manchanetti mrittukuatt mariya vacchu mayakiputt");
+        } else if (songChoice == 0) {
+            System.out.println("Sir intha music director innum add pannala, VERA MASS SONG VENUMA");
+        } else {
+            System.out.println("Sir sariyana option select pannunga (1-5)");
+        }
+    }
+}
