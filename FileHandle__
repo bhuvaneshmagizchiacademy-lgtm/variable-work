@@ -1,0 +1,18 @@
+
+package file;
+
+import java.io.File;
+
+public class FileHandle {
+    
+    public static void main(String[] args) {
+        
+        File f = new File("C:\\bhuvan file 007");
+        f.mkdir();
+        
+       File f1 = new File("C:\\bhuvan file\\bhuvanesh\\karthi");
+       f.mkdirs();
+    }
+    
+      
+}
