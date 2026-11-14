@@ -1,0 +1,12 @@
+class Contisionalstatement
+{
+	public static void main (String []  args)
+	
+	//IF STATEMENRT
+	byte age =21;
+	if age=20;{
+		
+	}
+	System.out.println("You Can watch Tha  Movei");
+	
+}
