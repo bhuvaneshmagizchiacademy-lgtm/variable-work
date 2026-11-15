@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Student {
+
+    String name;
+    int rollNo;
+
+    void addStudent(String n, int r) {
+        name = n;
+        rollNo = r;
+        System.out.println("Student details saved");
+    }
+
+    void updateStudent(String n) {
+        name = n;
+        System.out.println("Student name updated");
+    }
+
+    void displayStudent() {
+        System.out.println("Name: " + name);
+        System.out.println("Roll No: " + rollNo);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        Student s = new Student();
+
+        int choice;
+
+        do {
+            choice = sc.nextInt();
+
+            if (choice == 1) {
+                String name = sc.next();
+                int roll = sc.nextInt();
+                s.addStudent(name, roll);
+            }
+
+            else if (choice == 2) {
+                String newName = sc.next();
+                s.updateStudent(newName);
+            }
+
+            else if (choice == 3) {
+                s.displayStudent();
+            }
+
+            else if (choice == 4) {
+                System.out.println("Exited");
+            }
+
+        } while (choice != 4);
+    }
+}
