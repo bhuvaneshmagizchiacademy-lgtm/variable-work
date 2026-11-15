@@ -1,0 +1,17 @@
+class Operatorss
+{
+	public static void main(String [] args)
+	{
+		//Arithmetic
+		System.out.println(5+5);
+		System.out.println(30-10);
+		
+		//Relational
+		System.out.println(10==5);
+		System.out.println(7!=10);
+	    System.out.println(10>10);
+		System.out.println(10<20);
+	    System.out.println(20>=60);
+	    System.out.println(10<=40);
+	}
+}
