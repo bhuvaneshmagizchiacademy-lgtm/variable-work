@@ -1,0 +1,7 @@
+class Java
+{
+	public Static void main(String[]args)
+	{
+		System.out.println("Welcome To Java Programming")
+	}
+}
