@@ -1,0 +1,67 @@
+let choice = 0;
+
+while (choice !== 4) {
+    choice = Number(prompt(
+        "1. Add Two Numbers\n" +
+        "2. Check Even or Odd\n" +
+        "3. Multiply Two Numbers and Check Result\n" +
+        "4. Exit\n" +
+        "Enter your choice:"
+    ));
+
+    switch (choice) {
+
+        case 1:
+            let a = Number(prompt("Enter first number:"));
+            let b = Number(prompt("Enter second number:"));
+
+            let add = (x, y) => x + y;
+
+            function display(result) {
+                alert("Sum = " + result);
+            }
+
+            display(add(a, b));
+            break;
+
+        case 2:
+            let num = Number(prompt("Enter a number:"));
+
+            let check = function(n) {
+                if (n % 2 === 0) {
+                    alert("Even Number");
+                } else {
+                    alert("Odd Number");
+                }
+            };
+
+            check(num);
+            break;
+
+        case 3:
+            let x = Number(prompt("Enter first number:"));
+            let y = Number(prompt("Enter second number:"));
+
+            let multiply = (a, b) => a * b;
+
+            let result = multiply(x, y);
+
+            let checkResult = function(result) {
+                if (result > 100) {
+                    alert("Result is greater than 100");
+                } else {
+                    alert("Result is not greater than 100");
+                }
+            };
+
+            checkResult(result);
+            break;
+
+        case 4:
+            alert("Thank You! Exiting...");
+            break;
+
+        default:
+            alert("Invalid Choice");
+    }
+}
