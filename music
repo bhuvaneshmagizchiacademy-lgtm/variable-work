@@ -1,0 +1,7 @@
+class music
+{
+	public static void main(String[] aegs)
+	{
+		System.out.println("Life Is Better With Music");
+	}
+}
