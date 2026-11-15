@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+class Home15 {
+    int[] marks = new int[5];
+    int total = 0;
+    double average = 0;
+
+    void getMarks(Scanner sc) {
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Enter marks for subject " + (i + 1) + ": ");
+            marks[i] = sc.nextInt();
+        }
+        System.out.println("Marks entered successfully!");
+    }
+
+    void total() {
+        total = 0;
+        for (int i = 0; i < 5; i++) {
+            total = total + marks[i];
+        }
+        System.out.println("Total marks: " + total);
+    }
+
+    void average() {
+        average = total / 5.0;
+        System.out.println("Average: " + average);
+    }
+
+    void grade() {
+        if (average >= 90) {
+            System.out.println("Grade: A");
+        } else if (average >= 75) {
+            System.out.println("Grade: B");
+        } else if (average >= 60) {
+            System.out.println("Grade: C");
+        } else if (average >= 40) {
+            System.out.println("Grade: D");
+        } else {
+            System.out.println("Grade: F");
+        }
+    }
+
+    public static void main(String[] args) {
+        Home15 m = new Home15();
+        Scanner sc = new Scanner(System.in);
+        int choice = 0;
+        while (choice != 5) {
+            System.out.println("\n1. Enter marks\n2. Calculate total\n3. Calculate average\n4. Find grade\n5. Exit");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+            if (choice == 1) {
+                m.getMarks(sc);
+            } else if (choice == 2) {
+                m.total();
+            } else if (choice == 3) {
+                m.average();
+            } else if (choice == 4) {
+                m.grade();
+            } else if (choice == 5) {
+                System.out.println("Exiting... Goodbye!");
+            } else {
+                System.out.println("Invalid choice, try again!");
+            }
+        }
+    }
+}
