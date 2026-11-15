@@ -1,0 +1,84 @@
+class King1{
+
+   public static void main(String [] args){
+
+     //Variable and Datatypes
+     String name = "Krish";
+     byte studentsCount = 7;
+     short bhuvanesh = 200;
+     int grossary = 2500;
+     long aadhar = 123445678930l;
+     double accountBalance = 10000.00;
+     float mobilePrice = 25000.00f;
+     char grade='A';
+     boolean fail = true;
+
+     System.out.println("VARIABLES AND DATATYPES");
+
+     System.out.println("Name = "+ name);
+     System.out.println("Students Count = "+ studentsCount);
+     System.out.println("bhuvanesh Cash = "+ bhuvanesh);
+     System.out.println("Grossary = "+ grossary);
+     System.out.println("Aadhar Number = "+ aadhar);
+     System.out.println("Account Balance = "+ accountBalance);
+     System.out.println("Mobile Price = "+ mobilePrice);
+     System.out.println("Is Fail = "+ fail);
+
+     System.out.println("####################################");
+
+
+     System.out.println("ARITHMETIC OPERATORS");
+
+     int a = 10;
+     int b = 5;
+ 
+     System.out.println("A + B = "+ (a+b));
+     System.out.println("A - B = "+ (a-b));
+     System.out.println("A * B = "+ (a*b));
+     System.out.println("A / B = "+ (a/b));
+     System.out.println("A % B = "+ (a%b));
+
+     System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
+
+     System.out.println("ASSINGMENT OPERATORS");
+
+     int c = 10;
+     System.out.println("C = 10 = "+ c);
+     c += 5;
+     System.out.println("C += 5 = "+ c);
+     c-=2;
+     System.out.println("C -= 2 = "+ c);
+     c*=2;
+     System.out.println("C *= 2 = "+ c);
+     c/=2;
+     System.out.println("C /= 2 = "+ c);
+
+     System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
+
+     System.out.println("RELATIONAL OPERATORS");
+
+     int d = 100;
+     int e = 1000;
+     System.out.println("D == E = "+ (d==e));
+     System.out.println("D != E = "+ (d!=e));
+     System.out.println("D > E = "+ (d>e));
+     System.out.println("D < E = "+ (d<e));
+     System.out.println("D <= E = "+ (d<=e));
+     System.out.println("D <= E = "+ (d<=e));
+
+     System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
+
+     System.out.println("LOGICLA OPERATORS");
+
+     System.out.println("Logical AND ="+ ( (true) && (false) ));
+     System.out.println("Logical OR ="+( (true) || (false) ));
+     System.out.println("Logical NOT = "+ (!false));
+ 
+     System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
+  }
+
+ }
