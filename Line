@@ -1,0 +1,11 @@
+Class Line
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Java");
+		System.out.println("Food");
+		System.out.println("Dream");
+		System.out.println("Centeen");
+		System.out.println("ExamHall");
+	}
+}
