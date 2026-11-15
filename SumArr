@@ -1,0 +1,16 @@
+class SumArr
+{
+	public static void main(String [] args)
+	{
+		int[] arr={10,20,30,40,50};
+		int Sum = arr[0];
+		for (int i=2; i<arr.length; i++)
+		{
+			if(arr[i]<Sum)
+			{
+			Sum= arr[i];
+			}
+		}
+		System.out.println("Sum ="+ Sum);
+	}
+}	
