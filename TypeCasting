@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+class TypeCasting {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // 1. Integer to Double (Implicit Casting)
+        int a = sc.nextInt();
+        double d = a;
+        System.out.println(d);
+
+        // 2. Character to Integer (ASCII)
+        char ch = sc.next().charAt(0);
+        int ascii = ch;
+        System.out.println(ascii);
+
+        // 3. Double to Integer (Explicit Casting)
+        double num = sc.nextDouble();
+        int b = (int) num;
+        System.out.println(b);
+
+        // 4. Integer to Byte (Overflow)
+        int c = sc.nextInt();
+        byte bt = (byte) c;
+        System.out.println(bt);
+
+        sc.close();
+    }
+}
