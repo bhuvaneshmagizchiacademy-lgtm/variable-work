@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+class LinearrBinayySearch {
+
+    // Linear Search using Recursion 
+    static int linearSearch(int arr[], int index, int key) {
+        if (index >= arr.length)      // base case: reached end, not found
+            return -1;
+        if (arr[index] == key)        // base case: found
+            return index;
+        return linearSearch(arr, index + 1, key);  // recursive call
+    }
+
+    // Binary Search using Recursion
+    static int binarySearch(int arr[], int left, int right, int key) {
+        if (left > right)              // base case: not found
+            return -1;
+
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid] == key)
+            return mid;
+        else if (arr[mid] > key)
+            return binarySearch(arr, left, mid - 1, key);   // search left half
+        else
+            return binarySearch(arr, mid + 1, right, key);  // search right half
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== Linear Search using Recursion ===");
+        System.out.print("Enter size of array: ");
+        int n1 = sc.nextInt();
+        int[] arr1 = new int[n1];
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < n1; i++)
+            arr1[i] = sc.nextInt();
+
+        System.out.print("Enter key to search: ");
+        int key1 = sc.nextInt();
+
+        int result1 = linearSearch(arr1, 0, key1);
+        if (result1 != -1)
+            System.out.println("Element found at index: " + result1);
+        else
+            System.out.println("Element not found");
+
+        System.out.println("\n=== Binary Search using Recursion ===");
+        System.out.print("Enter size of sorted array: ");
+        int n2 = sc.nextInt();
+        int[] arr2 = new int[n2];
+        System.out.println("Enter sorted array elements:");
+        for (int i = 0; i < n2; i++)
+            arr2[i] = sc.nextInt();
+
+        System.out.print("Enter key to search: ");
+        int key2 = sc.nextInt();
+
+        int result2 = binarySearch(arr2, 0, n2 - 1, key2);
+        if (result2 != -1)
+            System.out.println("Element found at index: " + result2);
+        else
+            System.out.println("Element not found");
+
+        sc.close();
+    }
+}
