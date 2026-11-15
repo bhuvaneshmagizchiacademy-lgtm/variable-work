@@ -1,0 +1,29 @@
+import java.util.scanner;
+
+class Test{
+	
+	 int min( int []arr);{
+	 int min= arr;
+	 for(int i=1;i<arr.length;i++)
+		if(arr[i]>Min) Min = arr[i];
+	    return Min;
+	 }
+	 int Max( int []arr);{
+	 int Max= arr;
+	 for(int i=1;i<arr.length;i++)
+		if(arr[i]>max) max = arr[i];
+	    return Max;
+	 }
+	 int Sum( int []arr);{
+	 int Sum= arr;
+	 for(int i=1;i<arr.length;i++)
+		if(arr[i]>Sum) Sum = arr[i];
+	    return sum;
+	 }
+	 scanner sc = new Scaner(System.in);
+	 
+	 public static void main();{
+		 
+		 System.out.println(min  i<1 arr.length"" ++);
+	 }
+}
