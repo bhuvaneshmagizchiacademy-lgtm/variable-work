@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class Typee {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        //Integer to Double
+		
+        
+        int intVal = (25);
+        double doubleVal = intVal;   
+        System.out.println(doubleVal);
+
+        //Character to Integer
+		
+       
+        char ch = (25);
+        int ascii = ch;             
+        System.out.println(ascii);
+
+        //Double to Integer
+        
+        double B = (67);
+        int i = (int) B;             
+        System.out.println(i);
+
+        //Integer to Byte
+		
+        
+        int num = (66);
+        byte b = (byte) num;         
+        System.out.println(b);
+
+        sc.close();
+    }
+}
