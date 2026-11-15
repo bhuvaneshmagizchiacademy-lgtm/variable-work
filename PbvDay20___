@@ -1,0 +1,35 @@
+import java.util.Arrays;
+
+public class PbvDay20 {
+
+    // Pass by Value 
+	
+    static void changeValue(int num) {
+        num = 100;
+        System.out.println("Inside method (Primitive): " + num);
+    }
+
+    // Array Modification
+    static void changeArray(int[] arr) {
+        arr[0] = 100;
+        System.out.println("Inside method (Array): " + Arrays.toString(arr));
+    }
+
+    public static void main(String[] args) {
+
+        // Pass by Value (Primitive)
+        int number = 10;
+        System.out.println("Before method (Primitive): " + number);
+        changeValue(number);
+        System.out.println("After method (Primitive): " + number);
+
+        System.out.println();
+
+        // Array Modification
+        int[] numbers = {10, 20, 30, 40, 50};
+
+        System.out.println("Before method (Array): " + Arrays.toString(numbers));
+        changeArray(numbers);
+        System.out.println("After method (Array): " + Arrays.toString(numbers));
+    }
+}
