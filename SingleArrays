@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class SingleArrays {
+	
+    public static void main(String[] args) {
+		
+        Scanner sc = new Scanner(System.in);
+
+        // Array size 
+		
+        System.out.print("Enter array size: ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        // Loop vachu input
+		
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Loop vachu array 
+		
+        System.out.println("Array elements:");
+        for (int i = 0; i < n; i++) {
+            System.out.println("arr[" + i + "] = " + arr[i]);
+        }
+
+        // Sum 
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += arr[i];
+        }
+        System.out.println("Sum of elements: " + sum);
+
+        sc.close();
+    }
+}
