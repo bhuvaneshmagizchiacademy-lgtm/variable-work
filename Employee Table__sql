@@ -1,0 +1,104 @@
+-- 1. Create Employee Table
+CREATE TABLE Employee (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(100),
+    salary DECIMAL(10,2)
+);
+
+-- 2. Create Backup Table
+CREATE TABLE backup (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(100),
+    salary DECIMAL(10,2)
+);
+
+-- 3. Create BEFORE INSERT Function
+CREATE OR REPLACE FUNCTION check_salary()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    IF NEW.salary < 10000 THEN
+        NEW.salary := 10000;
+    END IF;
+
+    RETURN NEW;
+END;
+$$;
+
+-- 4. Create BEFORE INSERT Trigger
+CREATE TRIGGER before_employee_insert
+BEFORE INSERT ON Employee
+FOR EACH ROW
+EXECUTE FUNCTION check_salary();
+
+
+-- 5. Create BEFORE UPDATE Function
+CREATE OR REPLACE FUNCTION update_salary()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    IF NEW.salary < 10000 THEN
+        RAISE EXCEPTION 'Salary cannot be less than 10000';
+    END IF;
+
+    RETURN NEW;
+END;
+$$;
+
+-- 6. Create BEFORE UPDATE Trigger
+CREATE TRIGGER before_employee_update
+BEFORE UPDATE ON Employee
+FOR EACH ROW
+EXECUTE FUNCTION update_salary();
+
+
+-- 7. Create AFTER INSERT Function
+CREATE OR REPLACE FUNCTION backup_employee()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    INSERT INTO backup (emp_id, emp_name, salary)
+    VALUES (NEW.emp_id, NEW.emp_name, NEW.salary);
+
+    RETURN NEW;
+END;
+$$;
+
+-- 8. Create AFTER INSERT Trigger
+CREATE TRIGGER after_employee_insert
+AFTER INSERT ON Employee
+FOR EACH ROW
+EXECUTE FUNCTION backup_employee();
+
+
+-- 9. Insert Employee
+INSERT INTO Employee VALUES (101, 'Arun', 8000);
+
+INSERT INTO Employee VALUES (102, 'Bala', 25000);
+
+
+-- 10. Display Employee Table
+SELECT * FROM Employee;
+
+-- 11. Display Backup Table
+SELECT * FROM backup;
+
+
+-- 12. Update Employee Salary
+UPDATE Employee
+SET salary = 20000
+WHERE emp_id = 101;
+
+-- 13. Display Updated Employee Table
+SELECT * FROM Employee;
+
+
+-- 14. Delete Employee
+DELETE FROM Employee
+WHERE emp_id = 102;
+
+-- 15. Display Final Employee Table
+SELECT * FROM Employee;
