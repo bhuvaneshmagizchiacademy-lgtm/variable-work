@@ -1,0 +1,44 @@
+class Nestedd{
+
+    static void rightTriangleStar(int n) {
+		
+        System.out.println("Right Triangle Star Pattern");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    static void numberIncreasing(int n) {
+        System.out.println("Number Increasing Pattern");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    static void alphabetIncreasing(int n) {
+        System.out.println("Alphabet Increasing Pattern");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 0; j < i; j++) {
+                char ch = (char) ('A' + j);
+                System.out.print(ch);
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        rightTriangleStar(n);
+        numberIncreasing(n);
+        alphabetIncreasing(n);
+    }
+}
