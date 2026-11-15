@@ -1,0 +1,62 @@
+// 1. Print Hello World every 2 seconds
+
+function display() {
+    console.log("Hello World");
+}
+
+setInterval(display, 2000);
+
+
+// 2. Display numbers from 1 to 10 every 1 second
+
+let num = 1;
+
+function displayNumbers() {
+    console.log(num);
+    num++;
+
+    if (num > 10) {
+        clearInterval(timer1);
+    }
+}
+
+let timer1 = setInterval(displayNumbers, 1000);
+
+
+// 3. Display current time every second
+
+function displayTime() {
+    let time = new Date();
+    console.log(time.toLocaleTimeString());
+}
+
+setInterval(displayTime, 1000);
+
+
+// 4. Display even numbers continuously every 2 seconds
+
+let even = 2;
+
+function displayEven() {
+    console.log(even);
+    even = even + 2;
+}
+
+setInterval(displayEven, 2000);
+
+
+// 5. Countdown timer from 10 to 0
+
+let count = 10;
+
+function countdown() {
+    console.log(count);
+    count--;
+
+    if (count < 0) {
+        clearInterval(timer2);
+        console.log("Time Over!");
+    }
+}
+
+let timer2 = setInterval(countdown, 1000);
