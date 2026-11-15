@@ -1,0 +1,83 @@
+import java.util.Scanner;
+
+class SwitchStatement {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        q1_EvenOdd(sc);
+        q2_Largest(sc);
+        q3_Calculator(sc);
+        q4_Voting(sc);
+        q5_Grade(sc);
+    }
+
+    // Even or Odd Number
+    static void q1_EvenOdd(Scanner sc) {
+        System.out.println("----- Q1: Even or Odd Number -----");
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println(num + " is an Even number");
+        } else {
+            System.out.println(num + " is an Odd number");
+        }
+    }
+
+    // Largest of Two Numbers
+    static void q2_Largest(Scanner sc) {
+        System.out.println("\n----- Q2: Largest of Two Numbers -----");
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        if (a > b) {
+            System.out.println(a + " is the largest number");
+        } else {
+            System.out.println(b + " is the largest number");
+        }
+    }
+
+    // Simple Calculator
+    static void q3_Calculator(Scanner sc) {
+        System.out.println("\n----- Q3: Simple Calculator -----");
+        System.out.print("Enter first number: ");
+        int num1 = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int num2 = sc.nextInt();
+
+        int result = num1 + num2;
+        System.out.println("Result = " + result);
+    }
+
+    // Voting Eligibility Check
+    static void q4_Voting(Scanner sc) {
+        System.out.println("\n----- Q4: Voting Eligibility Check -----");
+        System.out.print("Enter age: ");
+        int age = sc.nextInt();
+
+        if (age >= 18) {
+            System.out.println("Eligible to vote");
+        } else {
+            System.out.println("Not eligible to vote");
+        }
+    }
+
+    // Grade Calculation
+    static void q5_Grade(Scanner sc) {
+        System.out.println("\n----- Q5: Grade Calculation -----");
+        System.out.print("Enter marks: ");
+        int marks = sc.nextInt();
+
+        if (marks >= 90) {
+            System.out.println("Grade: A");
+        } else if (marks >= 75) {
+            System.out.println("Grade: B");
+        } else if (marks >= 50) {
+            System.out.println("Grade: C");
+        } else {
+            System.out.println("Fail");
+        }
+    }
+}
