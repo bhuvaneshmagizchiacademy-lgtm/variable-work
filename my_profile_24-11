@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>My Profile</title>
+
+<style>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 550px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.video-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(8px);
+    z-index:-5;
+}
+
+
+body::before {
+    position: fixed;
+    z-index:1;
+}
+
+.card {
+    width: 450px;
+    background: rgba(255, 248, 231, 0.96);
+    border: 2px solid #D4AF37;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    gap: 15px;
+    padding-bottom: 30px;
+}
+
+.header {
+    width: 100%;
+    height: 150px;
+   background-color: #D4AF37;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff8e7;
+    margin-top: -100px;
+}
+
+.profile-img:hover{
+   transform: scale(1.1);
+}
+
+
+h2 {
+    font-size: 28px;
+    color: #3B2508;
+}
+
+p {
+    padding: 0 25px;
+    line-height: 26px;
+    font-size: 16px;
+    color: #4B3820;
+}
+
+button {
+    width: 160px;
+    padding: 13px;
+    background-color:#A67C00 ;
+    color: white;
+    border: 1px solid #8B6508;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+button:hover {
+    background: #c5ae31;
+    transform: scale(1.1);
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+
+<video class="video-bg" autoplay muted loop playsinline>
+
+    <source src="pampan video.mp4" type="video/mp4">
+
+</video>
+
+
+<div class="card">
+
+    <div class="header"></div>
+
+    <img src="my photo.jpeg" class="profile-img">
+
+    <h2>Bhuvanesh</h2>
+
+    <p>
+        I am Bhuvanesh, a passionate
+        Software Developer. I love creating
+        modern websites and applications.
+        I enjoy learning new technologies
+        and developing creative projects.
+    </p>
+
+    <button>Follow Me</button>
+</div>
+
+</body>
+</html>
