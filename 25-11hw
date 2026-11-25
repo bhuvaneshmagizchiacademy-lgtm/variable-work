@@ -1,0 +1,50 @@
+let user = {
+    firstName: "Bhuvanesh",
+    lastName: "Kumar",
+    email: "bhuvanesh@gmail.com"
+};
+
+let fullName = (user.firstName + " " + user.lastName).toUpperCase();
+
+let domain = user.email.split("@")[1];
+
+console.log("QUESTION 1: USER PROFILE");
+console.log("Full Name: " + fullName);
+console.log("Email: " + user.email);
+console.log("Email Domain: " + domain);
+
+
+
+
+let sentence = "JavaScript is a programming language";
+
+let totalCharacters = sentence.length;
+
+let totalWords = sentence.trim().split(" ").length;
+
+let lowerCase = sentence.toLowerCase();
+
+let result = {
+    characters: totalCharacters,
+    words: totalWords,
+    lowercase: lowerCase
+};
+
+console.log("QUESTION 2: WORD COUNT");
+console.log("Total Characters: " + result.characters);
+console.log("Total Words: " + result.words);
+console.log("Lowercase: " + result.lowercase);
+
+
+
+
+let name = "Bhuvanesh";
+
+let phone = "9876543210";
+
+let username = name.slice(0, 3) + phone.slice(-2);
+
+username = username.toLowerCase();
+
+console.log("QUESTION 3: USERNAME GENERATOR");
+console.log("Username: " + username);
